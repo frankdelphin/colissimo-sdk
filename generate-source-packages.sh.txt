@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+printf "Generating SlsService SOAP files\n"
+wsdltophp generate:package \
+--urlorpath="https://ws.colissimo.fr/sls-ws/SlsServiceWS/2.0?wsdl" \
+--destination="./build" \
+--composer-name="sengentobv/colissimo-sdk" \
+--namespace="SengentoBV\\ColissimoSdk\\Soap\\SlsService" \
+--prefix="ColissimoApi" \
+--structs-folder="Structs" \
+--arrays-folder="Arrays" \
+--enums-folder="Enums" \
+--services-folder="Services" \
+--force
