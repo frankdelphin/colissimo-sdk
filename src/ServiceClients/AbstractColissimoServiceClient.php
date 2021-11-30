@@ -67,20 +67,6 @@ abstract class AbstractColissimoServiceClient
 
             // Call the API
             $result = $serviceClient->$requestFunction(...$requestArguments);
-
-//            if (property_exists($result, 'errorCode') && property_exists($result, 'errorMessage') && $result->getErrorCode() > 0) {
-//                $fault = new SoapFault('CHRONO_ERR' . $result->errorCode, "Request failed: {$result->errorMessage} [{$result->errorCode}]");
-//                $result = false;
-//                $fault->detail = json_encode($result);
-//            } else if (method_exists($result, 'getReturn')) {
-//                $realResult = $result->getReturn();
-//
-//                if (property_exists($realResult, 'errorCode') && property_exists($realResult, 'errorMessage') && $realResult->getErrorCode() > 0) {
-//                    $fault = new SoapFault('CHRONO_ERR' . $realResult->getErrorCode(), "Request failed: {$realResult->getErrorMessage()} [{$realResult->getErrorCode()}]");
-//                    $result = false;
-//                    $fault->detail = json_encode($realResult);
-//                }
-//            }
         }
 
         if ($result === false) {
@@ -91,8 +77,8 @@ abstract class AbstractColissimoServiceClient
 
                     return $this->$functionName(...$arguments);
                 }
-            } catch (ColissimoException $chronoException) {
-                throw $chronoException;
+            } catch (ColissimoException $colissimoException) {
+                throw $colissimoException;
             } catch (Exception $exception) {
                 throw new ColissimoException(null, null, $exception);
             }

@@ -3,7 +3,6 @@
 namespace SengentoBV\ColissimoSdk;
 
 use SengentoBV\ColissimoSdk\Exceptions\ColissimoException;
-use SengentoBV\ColissimoSdk\ServiceClients\ColissimoSlsPhp8ServiceClient;
 use SengentoBV\ColissimoSdk\ServiceClients\ColissimoSlsServiceClient;
 use SengentoBV\ColissimoSdk\Services\ColissimoSoapServiceMap;
 use SengentoBV\ColissimoSdk\Soap\SlsService\ColissimoSlsApiClassMap;

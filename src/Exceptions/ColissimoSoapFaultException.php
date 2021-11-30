@@ -26,9 +26,6 @@ class ColissimoSoapFaultException extends ColissimoException
             if ($soapFault->faultcode === 'INTERNAL_AUTHENTICATION_NOT_SET') {
                 $message = 'Authentication not set.';
                 $code = -1;
-            } else {
-                $message = $soapFault->faultstring;
-                $code = strpos($soapFault->faultcode , 'CHRONO_ERR' ) === 0 ? intval(substr($soapFault->faultcode, strlen('CHRONO_ERR'))) : 0;
             }
         }
 
