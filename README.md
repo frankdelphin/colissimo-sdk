@@ -18,7 +18,7 @@ The recommended way to install this library is through
 [Composer](https://getcomposer.org/).
 
 ```bash
-composer require sengentobv/colissimo-sdk
+composer require franksengentobv/colissimo-sdk
 ```
 
 ### Manual Installation

@@ -1,5 +1,5 @@
 {
-  "name": "sengentobv/colissimo-sdk",
+  "name": "franksengentobv/colissimo-sdk",
   "description": "Unofficial Colissimo API PHP SDK",
   "license": "MIT",
   "require": {
